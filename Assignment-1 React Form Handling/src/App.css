@@ -1,0 +1,23 @@
+.App {
+  text-align: center;
+}
+
+#userform{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  
+}
+
+
+
+input[type='text'],
+input[type='email']{
+  margin-bottom: 12px;
+  padding: 5px 23px;
+  color: black;
+  background-color: dimgrey;
+  border-radius: 14px;
+  border: black;
+}
