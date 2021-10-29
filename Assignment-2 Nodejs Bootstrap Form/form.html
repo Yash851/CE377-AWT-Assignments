@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <title>Profile Page</title>
+</head>
+
+<body>
+  <div class="container">
+    <form action="/submit" method="POST" style="width:450px; margin:auto" class="needs-validation" novalidate>
+      <div class="my-2">
+        <label for="firstname" class="form-label">First name</label>
+        <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First name" required>
+        <div class="invalid-feedback">Please fill out first name</div>
+      </div>
+      <div class="my-2">
+        <label for="lastname" class="form-label">Last name</label>
+        <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last name" required>
+        <div class="invalid-feedback">Please fill out last name</div>
+      </div>
+
+      <div class="my-2">
+        <label for="email" class="form-label">Enter Email address</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
+        <div class="invalid-feedback">Please fill out email ID</div>
+      </div>
+
+      <div class="my-2">
+        <label for="mobileno" class="form-label">Mobile No.</label>
+        <input type="text" class="form-control" id="mobileno" name="mobileno" placeholder="Mobile No." required maxlength="10">
+        <div class="invalid-feedback">Please enter mobile no. having no more than 10 digits</div>
+      </div>
+
+      <div class="my-2">
+        <label for="DOB" class="form-label">Date of Birth</label>
+        <input type="text" class="form-control" id="DOB" name="DOB" placeholder="Date of Birth" required>
+        <div class="invalid-feedback">Please fill out date of birth</div>
+      </div>
+
+      <div class="my-2">
+        <label for="gender">Gender</label>
+        <select name="gender" id="gender" class="form-control" required>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+        <div class="invalid-feedback">Please select any one from given options</div>
+      </div>
+
+      <div class="my-2">
+        <label for="address" class="form-label">Address</label>
+        <input type="text" class="form-control" id="address" name="address" placeholder="address" required>
+        <div class="invalid-feedback">Please fill out address</div>
+      </div>
+
+      <div class="my-2">
+        <label for="institute">Institute</label>
+        <select name="institute" id="institute" class="form-control" required>
+          <option value="CSPIT">CSPIT</option>
+          <option value="DEPSTAR">DEPSTAR</option>
+        </select>
+        <div class="invalid-feedback">Please select any one from given options</div>
+      </div>
+
+      <div class="my-2">
+        <label for="dept">Department</label>
+        <select name="dept" id="dept" class="form-control" required>
+          <option value="CE">CE</option>
+          <option value="IT">IT</option>
+          <option value="EC">EC</option>
+          <option value="ME">ME</option>
+          <option value="EE">EE</option>
+        </select>
+        <div class="invalid-feedback">Please select any one from given options</div>
+      </div>
+
+      <div class="my-2">
+        <label for="semester">Semester</label>
+        <select name="semester" id="semester" class="form-control">
+          <option value="3">3</option>
+          <option value="5">5</option>
+          <option value="7">7</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+  </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+  integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+  integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+<script>
+  var form = document.querySelector('form');
+  form.addEventListener('submit', function(event){
+    if(form.checkValidity() === false){
+      event.preventDefault();
+      event.stopPropagation();
+    }
+    form.classList.add('was-validated');
+  })
+</script>
+</html>
