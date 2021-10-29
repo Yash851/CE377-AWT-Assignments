@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <title>Product Page</title>
+<style>
+body{
+  background: linear-gradient(to right,#11998e, #38ef7d);
+}
+  .ProductHead{
+    text-align: center;
+    font-family: 'Abril Fatface', cursive;
+    font-weight: bold;
+    font-size: 3.1rem;
+    color: #c1ff2c;
+    margin: 20px;
+    margin-bottom: 0px;
+}
+.card ul{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card ul li{
+  list-style: none;
+  padding-right: 20px;
+}
+.card ul span{
+  color: #1015c9;
+    font-weight: bold;
+    font-family: 'Roboto Mono', monospace;
+}
+.card{
+  background: white;
+    border-radius: 5px;
+    width: 60%;
+    margin: 56px auto;
+    padding: 12px;
+}
+.descriptionHead{
+  padding: 0px 23px;
+    font-size: 2rem;
+    font-family: 'Roboto Mono', monospace;
+    color: #3c9dba;
+    margin-bottom: -18px;
+    margin-top: 0px;
+}
+.description p{
+  font-family: 'Roboto Mono', monospace;
+    font-size: 1.1rem;
+    padding: 7px 18px;
+    margin-bottom: 2px;
+}
+.buy{
+  color: black;
+    display: block;
+    width: 27%;
+    margin: auto;
+    font-weight: bold;
+    border-radius: 3px;
+    padding: 7px 2px;
+    background: cornflowerblue;
+    font-family: 'Ubuntu', sans-serif;
+}
+.discount {
+  padding: 7px 17px;
+    width: 7%;
+    margin: auto;
+    margin-bottom: -24px;
+    background: red;
+    margin-top: 5px;
+    border-radius: 4px;
+}
+.nodiscount {
+    display: none;
+}
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="{%DISCOUNT%}">20% OFF</div>
+    <h3 class="ProductHead">{%PRODUCTNAME%}</h3>
+    <ul>
+      <li>
+        <span>Product Type: {%TYPE%}</span>
+      </li>
+
+      <li>
+        <span>Product Price: ${%PRICE%}</span>
+      </li>
+
+      <li>
+        <span>Product Quantity: {%QUANTITY%}</span>
+      </li>
+    </ul>
+    <div class="description">
+      <h4 class="descriptionHead">About Product..</h4>
+      <p>{%DESCRIPTION%}</p>
+    </div>
+    <a href="#" style="text-decoration: none;">
+      <span class="buy">🛒Add to shopping cart ({%PRICE%}€)</span>
+    </a>
+  </div>
+</body>
+</html>
